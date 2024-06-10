@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>9</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BurnsBac.WindowsHardware" Version="1.0.1" />
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="EasyModbusV2" Version="0.0.1" />
+    <PackageReference Include="Gem" Version="1.1.0.4239" />
+    <PackageReference Include="GemBox.Spreadsheet" Version="49.0.1655" />
+    <PackageReference Include="hima.lib.easymodbus" Version="5.6.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0">
+      <TreatAsUsed>true</TreatAsUsed>
+    </PackageReference>
+    <PackageReference Include="runtime.any.System.Threading.Timer" Version="4.3.0" />
+    <PackageReference Include="SerialPort" Version="1.0.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="System.Threading.Timer" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Advantech.Adam">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Advantech\AdamApax.NET Class Library\Class Library\Win32\Advantech.Adam.DLL</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Common">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Advantech\AdamApax.NET Class Library\Class Library\Win32\Advantech.Common.DLL</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Graph">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Advantech\AdamApax.NET Class Library\Class Library\Win32\Advantech.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Protocol">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Advantech\AdamApax.NET Class Library\Class Library\Win32\Advantech.Protocol.DLL</HintPath>
+    </Reference>
+    <Reference Include="EasyModbus">
+      <HintPath>..\..\..\Adam60XXDIO\packages\hima.lib.easymodbus.5.6.0\lib\EasyModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyModbusV2">
+      <HintPath>..\..\..\Adam60XXDIO\packages\EasyModbusV2.0.0.1\lib\net472\EasyModbusV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CoreScanner">
+      <HintPath>..\..\..\..\..\..\Program Files\Zebra Technologies\Barcode Scanners\Scanner SDK\Scanner SDK\Sample Applications\bin\Interop.CoreScanner.dll</HintPath>
+    </Reference>
+    <Reference Include="Properties.Resources.Designer.cs.dll">
+      <HintPath>..\..\Adam6050\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll</HintPath>
+    </Reference>
+    <Reference Include="ScannerSDK_SampleAPP_CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files\Zebra Technologies\Barcode Scanners\Scanner SDK\Scanner SDK\Sample Applications\bin\ScannerSDK_SampleAPP_CSharp.exe</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\Framework64\v2.0.50727\System.Deployment.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
