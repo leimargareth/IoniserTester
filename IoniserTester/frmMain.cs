@@ -20,7 +20,6 @@ using Advantech.Adam;
 using System.IO.Ports;
 using System.Diagnostics;
 
-
 //using DocumentFormat.OpenXml.Drawing;
 
 public partial class frmMain : Form
